@@ -9,7 +9,9 @@ echo.Unzipping node...
 "C:\Program Files\7-Zip\7z.exe" x node-v12.19.0-win-x64.zip -o%USERPROFILE%\Downloads\node-v12.19.0-win-x64
 
 echo.Setting up git config...
-SET PATH=%PATH%;%USERPROFILE%\Downloads\PortableGit\bin;
+SET PATH=%USERPROFILE%\Downloads\PortableGit\bin;
+
+cd /d %USERPROFILE%
 
 git config --global user.name "dirkarnez"
 git config --global user.email "smalldirkalex@gmail.com"
@@ -17,4 +19,4 @@ git config --global user.email "smalldirkalex@gmail.com"
 echo.Copying Launchers...
 copy Launchers\Code.cmd %USERPROFILE%\Downloads\VSCode-win32-x64-1.50.1
 
-
+pause
