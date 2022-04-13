@@ -44,8 +44,13 @@ echo Copying Launchers...
 copy Launchers\Code.cmd %DOWNLOADS_DIR%\VSCode-win32-x64-1.66.1
 copy Launchers\cmake-gui.cmd %DOWNLOADS_DIR%\cmake-3.22.2-windows-x86_64\bin
 copy Launchers\git-cmd.cmd %DOWNLOADS_DIR%\PortableGit
-copy gopath\src\github.com\dirkarnez\serial-locate\serial-locate.exe %DOWNLOADS_DIR%
-copy Software\staticserver.exe %DOWNLOADS_DIR%
+
+cd /d %DOWNLOADS_DIR%
+@REM  -L, --location      Follow redirects
+@REM  -J, --remote-header-name Use the header-provided filename
+@REM  -O, --remote-name   Write output to a file named as the remote file
+curl.exe https://github.com/dirkarnez/serial-locate/releases/download/v1.0.0/serial-locate.exe -L -O -J
+curl.exe https://github.com/dirkarnez/staticserver/releases/download/v1.2.0/staticserver.exe -L -O -J
 
 echo Setting up git config...
 SET PATH=%DOWNLOADS_DIR%\PortableGit\bin;
