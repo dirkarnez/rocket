@@ -49,8 +49,11 @@ cd /d %DOWNLOADS_DIR%
 @REM  -L, --location      Follow redirects
 @REM  -J, --remote-header-name Use the header-provided filename
 @REM  -O, --remote-name   Write output to a file named as the remote file
-curl.exe https://github.com/dirkarnez/serial-locate/releases/download/v1.0.0/serial-locate.exe -L -O -J
-curl.exe https://github.com/dirkarnez/staticserver/releases/download/v1.2.0/staticserver.exe -L -O -J
+curl.exe https://github.com/dirkarnez/serial-locate/releases/download/v1.0.0/serial-locate-v1.0.0.zip -L -O -J
+"C:\Program Files\7-Zip\7z.exe" x serial-locate-v1.0.0.zip
+
+curl.exe https://github.com/dirkarnez/staticserver/releases/download/v1.2.1/staticserver-v1.2.1.zip -L -O -J
+"C:\Program Files\7-Zip\7z.exe" x staticserver-v1.2.1.zip
 
 echo Setting up git config...
 SET PATH=%DOWNLOADS_DIR%\PortableGit\bin;
