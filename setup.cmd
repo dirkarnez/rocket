@@ -58,6 +58,9 @@ curl.exe https://github.com/dirkarnez/serial-locate/releases/download/v1.0.0/ser
 curl.exe https://github.com/dirkarnez/staticserver/releases/download/v1.2.1/staticserver-v1.2.1.zip -L -O -J
 "C:\Program Files\7-Zip\7z.exe" x staticserver-v1.2.1.zip
 
+curl.exe https://github.com/dirkarnez/git-commit-helper/releases/download/v0.0.4/git-commit-helper-v0.0.4.zip -L -O -J
+"C:\Program Files\7-Zip\7z.exe" x git-commit-helper-v0.0.4.zip
+
 echo Setting up git config...
 SET PATH=%DOWNLOADS_DIR%\PortableGit\bin;
 
