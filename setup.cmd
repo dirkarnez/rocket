@@ -3,6 +3,9 @@ set DOWNLOADS_DIR=%USERPROFILE%\Downloads
 
 cd Software
 
+echo add Microsoft Quick (old version)
+regedit.exe /s enable-old-version-of-microsoft-quick.reg
+
 echo Unzipping VSCode...
 "C:\Program Files\7-Zip\7z.exe" x VSCode-win32-x64-1.66.1.zip -o%DOWNLOADS_DIR%\VSCode-win32-x64-1.66.1
 
