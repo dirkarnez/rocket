@@ -74,4 +74,4 @@ git config --global user.email "smalldirkalex@gmail.com"
 cd /d "%DOWNLOADS_DIR%" &&^
 git clone https://github.com/dirkarnez/cmake-as-scripting.git
 cd cmake-as-scripting\common
-ren secrets.cmake.template secrets.cmake
+copy /y secrets.cmake.template secrets.cmake
