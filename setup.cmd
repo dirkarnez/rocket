@@ -11,8 +11,8 @@ echo Unzipping VSCode...
 echo Unzipping node...
 "C:\Program Files\7-Zip\7z.exe" x node-v16.13.1-win-x64.zip -o%DOWNLOADS_DIR%
 
-echo Unzipping LLVM...
-"C:\Program Files\7-Zip\7z.exe" x LLVM-13.0.0-win64.zip -o%DOWNLOADS_DIR%\LLVM-13.0.0-win64
+@REM echo Unzipping LLVM...
+@REM "C:\Program Files\7-Zip\7z.exe" x LLVM-13.0.0-win64.zip -o%DOWNLOADS_DIR%\LLVM-13.0.0-win64
 
 echo Unzipping mingw64-win32...
 "C:\Program Files\7-Zip\7z.exe" x x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z -o%DOWNLOADS_DIR%
@@ -35,7 +35,7 @@ echo Unzipping go...
 
 cd ..
 
-SET PATH=%DOWNLOADS_DIR%\PortableGit\bin;%DOWNLOADS_DIR%\PortableGit\usr\bin;
+SET PATH=%DOWNLOADS_DIR%\PortableGit\bin;%DOWNLOADS_DIR%\PortableGit\usr\bin;%SystemRoot%\System32
 
 cd /d %DOWNLOADS_DIR%
 @REM  -L, --location      Follow redirects
