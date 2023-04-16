@@ -35,6 +35,11 @@ echo Unzipping go...
 
 cd ..
 
+echo Copying Launchers...
+copy Launchers\Code.cmd %DOWNLOADS_DIR%\VSCode-win32-x64-1.66.1
+copy Launchers\cmake-gui.cmd %DOWNLOADS_DIR%\cmake-3.22.2-windows-x86_64\bin
+copy Launchers\git-cmd.cmd %DOWNLOADS_DIR%\PortableGit
+
 SET PATH=%DOWNLOADS_DIR%\PortableGit\bin;%DOWNLOADS_DIR%\PortableGit\usr\bin;%SystemRoot%\System32
 
 cd /d %DOWNLOADS_DIR%
@@ -58,11 +63,6 @@ curl.exe https://github.com/brechtsanders/winlibs_mingw/releases/download/12.2.0
 
 curl.exe https://github.com/git-for-windows/git/releases/download/v2.40.0.windows.1/PortableGit-2.40.0-64-bit.7z.exe -L -O -J
 "C:\Program Files\7-Zip\7z.exe" x PortableGit-2.40.0-64-bit.7z.exe -o%DOWNLOADS_DIR%\PortableGit
-
-echo Copying Launchers...
-copy Launchers\Code.cmd %DOWNLOADS_DIR%\VSCode-win32-x64-1.66.1
-copy Launchers\cmake-gui.cmd %DOWNLOADS_DIR%\cmake-3.22.2-windows-x86_64\bin
-copy Launchers\git-cmd.cmd %DOWNLOADS_DIR%\PortableGit
 
 echo Setting up git config...
 SET PATH=%DOWNLOADS_DIR%\PortableGit\bin;
