@@ -34,13 +34,7 @@ echo Unzipping go...
 @REM "C:\Program Files\7-Zip\7z.exe" x curl-7.82.0_4-win64-mingw.zip -o%DOWNLOADS_DIR%
 
 cd ..
-
-echo Copying Launchers...
 copy Launchers\Code.cmd %DOWNLOADS_DIR%\VSCode-win32-x64-1.66.1
-copy Launchers\cmake-gui.cmd %DOWNLOADS_DIR%\cmake-3.22.2-windows-x86_64\bin
-copy Launchers\git-cmd.cmd %DOWNLOADS_DIR%\PortableGit
-
-SET PATH=%DOWNLOADS_DIR%\PortableGit\bin;%DOWNLOADS_DIR%\PortableGit\usr\bin;%SystemRoot%\System32
 
 cd /d %DOWNLOADS_DIR%
 @REM  -L, --location      Follow redirects
@@ -64,8 +58,20 @@ curl.exe https://github.com/brechtsanders/winlibs_mingw/releases/download/12.2.0
 curl.exe https://github.com/git-for-windows/git/releases/download/v2.40.0.windows.1/PortableGit-2.40.0-64-bit.7z.exe -L -O -J
 "C:\Program Files\7-Zip\7z.exe" x PortableGit-2.40.0-64-bit.7z.exe -o%DOWNLOADS_DIR%\PortableGit
 
+for /f "tokens=*" %%a in (
+	'%DOWNLOADS_DIR%\PortableGit\usr\bin\head.exe  -n 1  %~dp0github_token.txt'
+) do (
+    set github_token=%%a
+)
+
+@REM copy Launchers\cmake-gui.cmd %DOWNLOADS_DIR%\cmake-3.22.2-windows-x86_64\bin
+@REM copy Launchers\git-cmd.cmd %DOWNLOADS_DIR%\PortableGit
+
 echo Setting up git config...
-SET PATH=%DOWNLOADS_DIR%\PortableGit\bin;
+SET PATH=^
+%DOWNLOADS_DIR%\PortableGit;^
+%DOWNLOADS_DIR%\PortableGit\bin;^
+%SystemRoot%\System32
 
 cd /d %USERPROFILE%
 
@@ -73,6 +79,9 @@ git config --global user.name "dirkarnez"
 git config --global user.email "smalldirkalex@gmail.com"
 
 cd /d "%DOWNLOADS_DIR%" &&^
-git clone https://github.com/dirkarnez/cmake-as-scripting.git
+git clone https://dirkarnez:%github_token%@github.com/dirkarnez/cmake-as-scripting.git
 cd cmake-as-scripting\common
 copy /y secrets.cmake.template secrets.cmake
+
+cd /d %DOWNLOADS_DIR%
+start git-cmd.exe
