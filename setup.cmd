@@ -5,9 +5,6 @@ start notepad github_token.txt
 
 cd Software
 
-echo Unzipping VSCode...
-"C:\Program Files\7-Zip\7z.exe" x VSCode-win32-x64-1.66.1.zip -o%DOWNLOADS_DIR%\VSCode-win32-x64-1.66.1
-
 @REM echo Unzipping LLVM...
 @REM "C:\Program Files\7-Zip\7z.exe" x LLVM-13.0.0-win64.zip -o%DOWNLOADS_DIR%\LLVM-13.0.0-win64
 
@@ -31,7 +28,7 @@ echo Unzipping go...
 @REM "C:\Program Files\7-Zip\7z.exe" x curl-7.82.0_4-win64-mingw.zip -o%DOWNLOADS_DIR%
 
 cd ..
-copy Launchers\Code.cmd %DOWNLOADS_DIR%\VSCode-win32-x64-1.66.1
+copy Launchers\Code.cmd %DOWNLOADS_DIR%\VSCode
 
 cd /d %DOWNLOADS_DIR%
 @REM  -L, --location      Follow redirects
@@ -57,6 +54,9 @@ curl.exe https://github.com/git-for-windows/git/releases/download/v2.40.0.window
 
 curl.exe https://nodejs.org/dist/v16.13.1/node-v16.13.1-win-x64.zip -L -O -J
 "C:\Program Files\7-Zip\7z.exe" x node-v16.13.1-win-x64.zip -o%DOWNLOADS_DIR%
+
+curl "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-archive" -L -J --output vscode.zip
+"C:\Program Files\7-Zip\7z.exe" x vscode.zip -oVSCode
 
 for /f "tokens=*" %%a in (
 	'%DOWNLOADS_DIR%\PortableGit\usr\bin\head.exe  -n 1  %~dp0github_token.txt'
