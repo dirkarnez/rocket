@@ -21,9 +21,6 @@ ren "%DOWNLOADS_DIR%\mingw64" "x86_64-8.1.0-release-posix-seh-rt_v6-rev0"
 @REM echo Unzipping nasm...
 @REM "C:\Program Files\7-Zip\7z.exe" x nasm-2.15.05-win64.zip -o%DOWNLOADS_DIR%
 
-echo Unzipping go...
-"C:\Program Files\7-Zip\7z.exe" x go1.17.5.windows-amd64.zip -o%DOWNLOADS_DIR%
-
 @REM echo Unzipping curl...
 @REM "C:\Program Files\7-Zip\7z.exe" x curl-7.82.0_4-win64-mingw.zip -o%DOWNLOADS_DIR%
 
@@ -57,6 +54,9 @@ curl.exe https://nodejs.org/dist/v16.13.1/node-v16.13.1-win-x64.zip -L -O -J
 
 curl "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-archive" -L -J --output vscode.zip
 "C:\Program Files\7-Zip\7z.exe" x vscode.zip -oVSCode
+
+curl "https://go.dev/dl/go1.17.5.windows-amd64.zip" -L -J --output go.zip
+"C:\Program Files\7-Zip\7z.exe" x go.zip -o%DOWNLOADS_DIR%
 
 for /f "tokens=*" %%a in (
 	'%DOWNLOADS_DIR%\PortableGit\usr\bin\head.exe  -n 1  %~dp0github_token.txt'
