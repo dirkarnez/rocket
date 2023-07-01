@@ -40,9 +40,13 @@ curl.exe https://github.com/dirkarnez/staticserver/releases/download/v1.2.1/stat
 @REM curl.exe https://github.com/dirkarnez/git-commit-helper/releases/download/v0.0.4/git-commit-helper-v0.0.4.zip -L -O -J
 @REM "C:\Program Files\7-Zip\7z.exe" x git-commit-helper-v0.0.4.zip
 
-cd /d "%TEMP%" && curl "https://github.com/Kitware/CMake/releases/download/v3.26.1/cmake-3.26.1-windows-x86_64.zip" -L -O && "C:\Program Files\7-Zip\7z.exe" x cmake-3.26.1-windows-x86_64.zip -o"%USERPROFILE%\Downloads"
+cd /d "%TEMP%" && ^
+curl "https://github.com/Kitware/CMake/releases/download/v3.26.1/cmake-3.26.1-windows-x86_64.zip" -L -O && ^
+"C:\Program Files\7-Zip\7z.exe" x cmake-3.26.1-windows-x86_64.zip -o"%USERPROFILE%\Downloads"
 
-cd /d "%TEMP%" && curl "https://github.com/brechtsanders/winlibs_mingw/releases/download/12.2.0-15.0.7-10.0.0-ucrt-r4/winlibs-x86_64-posix-seh-gcc-12.2.0-mingw-w64ucrt-10.0.0-r4.zip" -L -O && "C:\Program Files\7-Zip\7z.exe" x winlibs-x86_64-posix-seh-gcc-12.2.0-mingw-w64ucrt-10.0.0-r4.zip -o"%USERPROFILE%\Downloads\winlibs-x86_64-posix-seh-gcc-12.2.0-mingw-w64ucrt-10.0.0-r4"
+cd /d "%TEMP%" && ^
+curl "https://github.com/brechtsanders/winlibs_mingw/releases/download/12.2.0-15.0.7-10.0.0-ucrt-r4/winlibs-x86_64-posix-seh-gcc-12.2.0-mingw-w64ucrt-10.0.0-r4.zip" -L -O && ^
+"C:\Program Files\7-Zip\7z.exe" x winlibs-x86_64-posix-seh-gcc-12.2.0-mingw-w64ucrt-10.0.0-r4.zip -o"%USERPROFILE%\Downloads\winlibs-x86_64-posix-seh-gcc-12.2.0-mingw-w64ucrt-10.0.0-r4"
 
 curl.exe https://github.com/git-for-windows/git/releases/download/v2.40.0.windows.1/PortableGit-2.40.0-64-bit.7z.exe -L -O -J
 "C:\Program Files\7-Zip\7z.exe" x PortableGit-2.40.0-64-bit.7z.exe -o%DOWNLOADS_DIR%\PortableGit
