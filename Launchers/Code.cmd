@@ -9,8 +9,7 @@ SET PATH=^
 %DOWNLOADS_DIR%\PortableGit\bin;^
 %DOWNLOADS_DIR%\x86_64-8.1.0-release-posix-seh-rt_v6-rev0;^
 %DOWNLOADS_DIR%\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\bin;^
-%DOWNLOADS_DIR%\cmake-3.22.2-windows-x86_64\bin;^
-%SystemRoot%\System32
+%DOWNLOADS_DIR%\cmake-3.22.2-windows-x86_64\bin;
 
 REM set EXTENSION_PATH="%~dp0extensions"
 REM set USER_DATA_PATH="%~dp0user_data"
@@ -26,4 +25,4 @@ if not exist %USER_DATA_PATH% (
 )
 
 set GOPATH=P:\Downloads\gopath
-start Code.exe --extensions-dir %EXTENSION_PATH% --user-data-dir %USER_DATA_PATH%
+start %~dp0\Code.exe --extensions-dir %EXTENSION_PATH% --user-data-dir %USER_DATA_PATH% %*
