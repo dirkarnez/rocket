@@ -57,6 +57,11 @@ cd /d "%TEMP%" && ^
 C:\PROGRA~1\7-Zip\7z.exe x winlibs-x86_64-posix-seh-gcc-12.2.0-mingw-w64ucrt-10.0.0-r4.zip -o"%USERPROFILE%\Downloads\winlibs-x86_64-posix-seh-gcc-12.2.0-mingw-w64ucrt-10.0.0-r4" && ^
 del winlibs-x86_64-posix-seh-gcc-12.2.0-mingw-w64ucrt-10.0.0-r4.zip
 
+cd /d "%TEMP%" && ^
+%SystemRoot%\System32\curl.exe "https://github.com/dirkarnez/cpp-tools/raw/main/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z" -L -O && ^
+C:\PROGRA~1\7-Zip\7z.exe x x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z -o"%USERPROFILE%\Downloads\x86_64-8.1.0-release-posix-seh-rt_v6-rev0" && ^
+del x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z
+
 %SystemRoot%\System32\curl.exe https://github.com/git-for-windows/git/releases/download/v2.40.0.windows.1/PortableGit-2.40.0-64-bit.7z.exe -L -O -J
 C:\PROGRA~1\7-Zip\7z.exe x PortableGit-2.40.0-64-bit.7z.exe -o%DOWNLOADS_DIR%\PortableGit && ^
 del PortableGit-2.40.0-64-bit.7z.exe
