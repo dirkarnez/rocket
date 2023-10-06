@@ -73,6 +73,7 @@ for /F "usebackq tokens=*" %%A in ("%~dp0github_token.txt") DO (
 	goto :next
 )
 
+:next
 echo %github_token%
 
 @REM copy Launchers\cmake-gui.cmd %DOWNLOADS_DIR%\cmake-3.22.2-windows-x86_64\bin
