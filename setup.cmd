@@ -1,11 +1,9 @@
 @echo off
 set DOWNLOADS_DIR=%USERPROFILE%\Downloads
 
-set CURRENT=%cd%
+start notepad %~dp0..\github_token.txt
 
-start notepad github_token.txt
-
-cd Software
+cd %~dp0..\Downloads\Software
 
 echo Unzipping VSCode...
 "C:\Program Files\7-Zip\7z.exe" x VSCode-win32-x64-1.66.1.zip -o%DOWNLOADS_DIR%\VSCode-win32-x64-1.66.1
@@ -31,8 +29,8 @@ echo Unzipping VSCode...
 @REM echo Unzipping curl...
 @REM "C:\Program Files\7-Zip\7z.exe" x curl-7.82.0_4-win64-mingw.zip -o%DOWNLOADS_DIR%
 
-cd ..
-copy Launchers\Code.cmd %DOWNLOADS_DIR%\VSCode-win32-x64-1.66.1
+@REM cd ..
+@REM copy Launchers\Code.cmd %DOWNLOADS_DIR%\VSCode-win32-x64-1.66.1
 
 @REM  -L, --location      Follow redirects
 @REM  -J, --remote-header-name Use the header-provided filename
@@ -72,9 +70,7 @@ cd /d "%TEMP%" && ^
 C:\PROGRA~1\7-Zip\7z.exe x x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z -o"%USERPROFILE%\Downloads\x86_64-8.1.0-release-posix-seh-rt_v6-rev0" && ^
 del x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z
 
-cd /d %CURRENT%
-
-for /F "usebackq tokens=*" %%A in ("%~dp0github_token.txt") DO (
+for /F "usebackq tokens=*" %%A in ("%~dp0..\github_token.txt") DO (
 	set github_token=%%A
 	goto :next
 )
