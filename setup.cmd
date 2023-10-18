@@ -5,9 +5,6 @@ start notepad %~dp0..\github_token.txt
 
 cd %~dp0..\Downloads\Software
 
-echo Unzipping VSCode...
-"C:\Program Files\7-Zip\7z.exe" x VSCode-win32-x64-1.66.1.zip -o%DOWNLOADS_DIR%\VSCode-win32-x64-1.66.1
-
 @REM echo Unzipping node...
 @REM "C:\Program Files\7-Zip\7z.exe" x node-v16.13.1-win-x64.zip -o%DOWNLOADS_DIR%
 
