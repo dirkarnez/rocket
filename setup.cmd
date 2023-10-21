@@ -3,7 +3,7 @@ set DOWNLOADS_DIR=%USERPROFILE%\Downloads
 
 start notepad %~dp0..\github_token.txt
 
-cd %~dp0..\Downloads\Software
+@REM cd %~dp0..\Downloads\Software
 
 @REM echo Unzipping node...
 @REM "C:\Program Files\7-Zip\7z.exe" x node-v16.13.1-win-x64.zip -o%DOWNLOADS_DIR%
