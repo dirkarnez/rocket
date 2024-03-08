@@ -68,12 +68,12 @@ del x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z
 
 @REM the file to read should not have BOM first
 for /F "usebackq tokens=*" %%A in ("%~dp0..\github_token.txt") DO (
-	set github_token=%%A
+	set GIT_TOKEN=%%A
 	goto :next
 )
 
 :next
-echo %github_token%
+echo %GIT_TOKEN%
 
 @REM copy Launchers\cmake-gui.cmd %DOWNLOADS_DIR%\cmake-3.22.2-windows-x86_64\bin
 @REM copy Launchers\git-cmd.cmd %DOWNLOADS_DIR%\PortableGit
@@ -92,8 +92,10 @@ git config --global user.email "smalldirkalex@gmail.com"
 
 cd /d "%DOWNLOADS_DIR%" &&^
 git clone https://dirkarnez:%github_token%@github.com/dirkarnez/cmake-as-scripting.git
-cd cmake-as-scripting\common
-copy /y secrets.cmake.template secrets.cmake
+cd cmake-as-scripting &&^
+.\local-school-build.cmd .\set-secret.cmake &&^
+.\local-school-build.cmd .\register-open-as.cmake &&^
+.\local-school-build.cmd .\register-git-bash.cmake
 
 cd /d %DOWNLOADS_DIR%
 start git-cmd.exe
