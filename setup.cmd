@@ -1,6 +1,6 @@
 @echo off
 set DOWNLOADS_DIR=%USERPROFILE%\Downloads
-set PATH=%DOWNLOADS_DIR%\PortableGit\mingw64\bin
+set PATH=%DOWNLOADS_DIR%\curl-8.6.0_4-win64-mingw\curl-8.6.0_4-win64-mingw\bin
 
 start notepad %~dp0..\github_token.txt
 
@@ -38,6 +38,11 @@ cd /d "%TEMP%" && ^
 %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/git-for-windows/git/releases/download/v2.42.0.windows.2/PortableGit-2.42.0.2-64-bit.7z.exe\"  -OutFile PortableGit-2.42.0.2-64-bit.7z.exe" &&^
 PortableGit-2.42.0.2-64-bit.7z.exe -o%DOWNLOADS_DIR%\PortableGit -y && ^
 del PortableGit-2.42.0.2-64-bit.7z.exe
+
+cd /d "%TEMP%" && ^
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://curl.se/windows/dl-8.6.0_4/curl-8.6.0_4-win64-mingw.zip\"  -OutFile curl-8.6.0_4-win64-mingw.zip" &&^
+C:\PROGRA~1\7-Zip\7z.exe x curl-8.6.0_4-win64-mingw.zip -o%DOWNLOADS_DIR%\curl-8.6.0_4-win64-mingw &&^
+del curl-8.6.0_4-win64-mingw.zip
 
 cd /d "%TEMP%" && ^
 curl.exe https://github.com/dirkarnez/serial-locate/releases/download/v1.0.0/serial-locate-v1.0.0.zip -L -O -J &&^
@@ -90,6 +95,7 @@ cd /d %USERPROFILE%
 
 git config --global user.name "dirkarnez"
 git config --global user.email "smalldirkalex@gmail.com"
+git config --global http.sslBackend openssl
 
 cd /d "%DOWNLOADS_DIR%" &&^
 git clone https://dirkarnez:%github_token%@github.com/dirkarnez/cmake-as-scripting.git
