@@ -107,7 +107,7 @@ cd cmake-as-scripting &&^
 cd /d %DOWNLOADS_DIR%
 start git-cmd.exe
 
-start rundll32.exe url.dll,OpenURL "https://calendar.google.com/calendar/u/0/r?pli=1"
+start C:\Windows\System32\rundll32.exe url.dll,OpenURL "https://calendar.google.com/calendar/u/0/r?pli=1"
 
-REG.EXE add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve && taskkill /f /im explorer.exe && explorer.exe
+C:\Windows\System32\REG.EXE add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve && C:\Windows\System32\taskkill.exe /f /im explorer.exe && C:\Windows\explorer.exe
 
