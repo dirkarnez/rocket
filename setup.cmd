@@ -2,6 +2,9 @@
 set DOWNLOADS_DIR=%USERPROFILE%\Downloads
 set PATH=%DOWNLOADS_DIR%\curl-8.6.0_4-win64-mingw\curl-8.6.0_4-win64-mingw\bin
 
+start C:\Windows\System32\rundll32.exe url.dll,OpenURL "https://calendar.google.com/calendar/u/0/r?pli=1"
+start C:\Windows\System32\rundll32.exe url.dll,OpenURL "https://xtab.app/"
+
 start notepad %~dp0..\github_token.txt
 
 @REM cd %~dp0..\Downloads\Software
@@ -107,7 +110,4 @@ cd cmake-as-scripting &&^
 cd /d %DOWNLOADS_DIR%
 start git-cmd.exe
 
-start C:\Windows\System32\rundll32.exe url.dll,OpenURL "https://calendar.google.com/calendar/u/0/r?pli=1"
-
 C:\Windows\System32\REG.EXE add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve && C:\Windows\System32\taskkill.exe /f /im explorer.exe && C:\Windows\explorer.exe
-
