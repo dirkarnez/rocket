@@ -3,7 +3,7 @@ set DOWNLOADS_DIR=%USERPROFILE%\Downloads
 set PATH=%DOWNLOADS_DIR%\curl-8.6.0_4-win64-mingw\curl-8.6.0_4-win64-mingw\bin
 
 start C:\Windows\System32\rundll32.exe url.dll,OpenURL "https://calendar.google.com/calendar/u/0/r?pli=1"
-start C:\Windows\System32\rundll32.exe url.dll,OpenURL "https://xtab.app/"
+start C:\Windows\System32\rundll32.exe url.dll,OpenURL "https://chromewebstore.google.com/detail/tab-limiter/pbpfchnddjilendkobiabenojlniemoh"
 
 start notepad %~dp0..\github_token.txt
 
