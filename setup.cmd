@@ -103,9 +103,9 @@ git config --global http.sslBackend openssl
 cd /d "%DOWNLOADS_DIR%" &&^
 git clone https://dirkarnez:%github_token%@github.com/dirkarnez/cmake-as-scripting.git
 cd cmake-as-scripting &&^
-.\local-school-build.cmd .\set-secret.cmake &&^
-.\local-school-build.cmd .\register-open-as.cmake &&^
-.\local-school-build.cmd .\register-git-bash.cmake
+.\local-run.cmd .\set-secret.cmake &&^
+.\local-run.cmd .\register-open-as.cmake &&^
+.\local-run.cmd .\register-git-bash.cmake
 
 cd /d %DOWNLOADS_DIR%
 start git-cmd.exe
