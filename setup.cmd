@@ -104,7 +104,7 @@ git config --global user.email "smalldirkalex@gmail.com"
 git config --global http.sslBackend openssl
 
 cd /d "%DOWNLOADS_DIR%" &&^
-git clone https://dirkarnez:%github_token%@github.com/dirkarnez/cmake-as-scripting.git
+git clone https://dirkarnez:%GIT_TOKEN%@github.com/dirkarnez/cmake-as-scripting.git
 cd cmake-as-scripting &&^
 .\local-run.cmd .\set-secret.cmake &&^
 .\local-run.cmd .\register-open-as.cmake &&^
