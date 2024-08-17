@@ -2,10 +2,11 @@
 set DOWNLOADS_DIR=%USERPROFILE%\Downloads
 set PATH=%DOWNLOADS_DIR%\curl-8.6.0_4-win64-mingw\curl-8.6.0_4-win64-mingw\bin
 
+set /p GIT_TOKEN="Enter GitHub Token: "
+echo %GIT_TOKEN%
+
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://calendar.google.com/calendar/u/0/r?pli=1"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://chromewebstore.google.com/detail/tab-limiter/pbpfchnddjilendkobiabenojlniemoh"
-
-start notepad %~dp0..\github_token.txt
 
 @REM cd %~dp0..\Downloads\Software
 
@@ -76,13 +77,13 @@ C:\PROGRA~1\7-Zip\7z.exe x x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z -o"%USER
 del x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z
 
 @REM the file to read should not have BOM first
-for /F "usebackq tokens=*" %%A in ("%~dp0..\github_token.txt") DO (
-	set GIT_TOKEN=%%A
-	goto :next
-)
-
-:next
-echo %GIT_TOKEN%
+@REM for /F "usebackq tokens=*" %%A in ("%~dp0..\github_token.txt") DO (
+@REM 	set GIT_TOKEN=%%A
+@REM 	goto :next
+@REM )
+@REM 
+@REM :next
+@REM echo %GIT_TOKEN%
 
 @REM copy Launchers\cmake-gui.cmd %DOWNLOADS_DIR%\cmake-3.22.2-windows-x86_64\bin
 @REM copy Launchers\git-cmd.cmd %DOWNLOADS_DIR%\PortableGit
