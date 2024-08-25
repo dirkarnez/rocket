@@ -2,7 +2,7 @@
 set DOWNLOADS_DIR=%USERPROFILE%\Downloads
 set PATH=%DOWNLOADS_DIR%\curl-8.6.0_4-win64-mingw\curl-8.6.0_4-win64-mingw\bin
 
-
+start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://github.com/dirkarnez/bookmark-as-extension"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://calendar.google.com/calendar/u/0/r?pli=1"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://chromewebstore.google.com/detail/tab-limiter/pbpfchnddjilendkobiabenojlniemoh"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://github.com/login"
