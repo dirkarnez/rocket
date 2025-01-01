@@ -64,9 +64,9 @@ del staticserver-v1.2.1.zip
 @REM "C:\Program Files\7-Zip\7z.exe" x git-commit-helper-v0.0.4.zip
 
 cd /d "%TEMP%" && ^
-curl.exe https://github.com/Kitware/CMake/releases/download/v3.26.1/cmake-3.26.1-windows-x86_64.zip -L -O -J &&^
-C:\PROGRA~1\7-Zip\7z.exe x cmake-3.26.1-windows-x86_64.zip -o%DOWNLOADS_DIR% &&^
-del cmake-3.26.1-windows-x86_64.zip
+curl.exe https://github.com/Kitware/CMake/releases/download/v3.29.3/cmake-3.29.3-windows-x86_64.zip -L -O -J &&^
+C:\PROGRA~1\7-Zip\7z.exe x cmake-3.29.3-windows-x86_64.zip -o%DOWNLOADS_DIR% &&^
+del cmake-3.29.3-windows-x86_64.zip
 
 cd /d "%TEMP%" && ^
 curl.exe https://github.com/brechtsanders/winlibs_mingw/releases/download/11.2.0-12.0.1-9.0.0-r1/winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip -L -O -J && ^
