@@ -1,11 +1,14 @@
 @echo off
 set DOWNLOADS_DIR=%USERPROFILE%\Downloads
-set PATH=%DOWNLOADS_DIR%\curl-8.6.0_4-win64-mingw\curl-8.6.0_4-win64-mingw\bin
+set PATH=^
+%DOWNLOADS_DIR%\curl-8.6.0_4-win64-mingw\curl-8.6.0_4-win64-mingw\bin;^
+%DOWNLOADS_DIR%\PortableGit\bin;
 
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://github.com/dirkarnez/bookmark-as-extension"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://calendar.google.com/calendar/u/0/r?pli=1"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://chromewebstore.google.com/detail/tab-limiter/pbpfchnddjilendkobiabenojlniemoh"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://github.com/login"
+start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://www.google.com/search?q=waves+plugin+free&tbs=qdr:d"
 
 set /p GIT_TOKEN="Enter GitHub Token: "
 echo %GIT_TOKEN%
@@ -45,10 +48,10 @@ cd /d "%TEMP%" && ^
 PortableGit-2.42.0.2-64-bit.7z.exe -o%DOWNLOADS_DIR%\PortableGit -y && ^
 del PortableGit-2.42.0.2-64-bit.7z.exe
 
-cd /d "%TEMP%" && ^
-%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://curl.se/windows/dl-8.6.0_4/curl-8.6.0_4-win64-mingw.zip\"  -OutFile curl-8.6.0_4-win64-mingw.zip" &&^
-C:\PROGRA~1\7-Zip\7z.exe x curl-8.6.0_4-win64-mingw.zip -o%DOWNLOADS_DIR%\curl-8.6.0_4-win64-mingw &&^
-del curl-8.6.0_4-win64-mingw.zip
+@REM  cd /d "%TEMP%" && ^
+@REM  %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://curl.se/windows/dl-8.6.0_4/curl-8.6.0_4-win64-mingw.zip\"  -OutFile curl-8.6.0_4-win64-mingw.zip" &&^
+@REM  C:\PROGRA~1\7-Zip\7z.exe x curl-8.6.0_4-win64-mingw.zip -o%DOWNLOADS_DIR%\curl-8.6.0_4-win64-mingw &&^
+@REM  del curl-8.6.0_4-win64-mingw.zip
 
 cd /d "%TEMP%" && ^
 curl.exe https://github.com/dirkarnez/serial-locate/releases/download/v1.0.0/serial-locate-v1.0.0.zip -L -O -J &&^
