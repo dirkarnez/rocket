@@ -1,8 +1,10 @@
 @echo off
+
+@REM %DOWNLOADS_DIR%\curl-8.6.0_4-win64-mingw\curl-8.6.0_4-win64-mingw\bin;
+
 set DOWNLOADS_DIR=%USERPROFILE%\Downloads
 set PATH=^
-%DOWNLOADS_DIR%\curl-8.6.0_4-win64-mingw\curl-8.6.0_4-win64-mingw\bin;^
-%DOWNLOADS_DIR%\PortableGit\bin;
+%DOWNLOADS_DIR%\PortableGit\mingw64\bin;
 
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://github.com/dirkarnez/bookmark-as-extension"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://calendar.google.com/calendar/u/0/r?pli=1"
