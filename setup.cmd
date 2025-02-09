@@ -46,7 +46,7 @@ echo %GIT_TOKEN%
 @REM  -O, --remote-name   Write output to a file named as the remote file
 
 cd /d "%TEMP%" && ^
-%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/git-for-windows/git/releases/download/v2.42.0.windows.2/PortableGit-2.42.0.2-64-bit.7z.exe\"  -OutFile PortableGit-2.42.0.2-64-bit.7z.exe" &&^
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/git-for-windows/git/releases/download/v2.42.0.windows.2/PortableGit-2.42.0.2-64-bit.7z.exe\" -OutFile PortableGit-2.42.0.2-64-bit.7z.exe" &&^
 PortableGit-2.42.0.2-64-bit.7z.exe -o%DOWNLOADS_DIR%\PortableGit -y && ^
 del PortableGit-2.42.0.2-64-bit.7z.exe
 
@@ -56,12 +56,12 @@ del PortableGit-2.42.0.2-64-bit.7z.exe
 @REM  del curl-8.6.0_4-win64-mingw.zip
 
 cd /d "%TEMP%" && ^
-curl.exe https://github.com/dirkarnez/serial-locate/releases/download/v1.0.0/serial-locate-v1.0.0.zip -L -O -J &&^
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/dirkarnez/serial-locate/releases/download/v1.0.0/serial-locate-v1.0.0.zip\" -OutFile serial-locate-v1.0.0.zip" &&^
 C:\PROGRA~1\7-Zip\7z.exe x serial-locate-v1.0.0.zip -o%DOWNLOADS_DIR% &&^
 del serial-locate-v1.0.0.zip
 
 cd /d "%TEMP%" && ^
-curl.exe https://github.com/dirkarnez/staticserver/releases/download/v1.2.1/staticserver-v1.2.1.zip -L -O -J &&^
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/dirkarnez/staticserver/releases/download/v1.2.1/staticserver-v1.2.1.zip\" -OutFile staticserver-v1.2.1.zip" &&^
 C:\PROGRA~1\7-Zip\7z.exe x staticserver-v1.2.1.zip -o%DOWNLOADS_DIR% &&^
 del staticserver-v1.2.1.zip
 
@@ -69,17 +69,17 @@ del staticserver-v1.2.1.zip
 @REM "C:\Program Files\7-Zip\7z.exe" x git-commit-helper-v0.0.4.zip
 
 cd /d "%TEMP%" && ^
-curl.exe https://github.com/Kitware/CMake/releases/download/v3.29.3/cmake-3.29.3-windows-x86_64.zip -L -O -J &&^
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/Kitware/CMake/releases/download/v3.29.3/cmake-3.29.3-windows-x86_64.zip\" -OutFile cmake-3.29.3-windows-x86_64.zip" &&^
 C:\PROGRA~1\7-Zip\7z.exe x cmake-3.29.3-windows-x86_64.zip -o%DOWNLOADS_DIR% &&^
 del cmake-3.29.3-windows-x86_64.zip
 
 cd /d "%TEMP%" && ^
-curl.exe https://github.com/brechtsanders/winlibs_mingw/releases/download/11.2.0-12.0.1-9.0.0-r1/winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip -L -O -J && ^
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/brechtsanders/winlibs_mingw/releases/download/11.2.0-12.0.1-9.0.0-r1/winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip\" -OutFile winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip" &&^
 C:\PROGRA~1\7-Zip\7z.exe x winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip -o%DOWNLOADS_DIR%\winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1 &&^
 del winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip
 
 cd /d "%TEMP%" && ^
-curl.exe "https://github.com/dirkarnez/cpp-tools/raw/main/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z" -L -O -J && ^
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/dirkarnez/cpp-tools/raw/main/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z\" -OutFile x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z" &&^
 C:\PROGRA~1\7-Zip\7z.exe x x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z -o"%USERPROFILE%\Downloads\x86_64-8.1.0-release-posix-seh-rt_v6-rev0" && ^
 del x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z
 
