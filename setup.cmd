@@ -7,6 +7,8 @@ set PATH=^
 %DOWNLOADS_DIR%\PortableGit\mingw64\bin;
 
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://github.com/dirkarnez/bookmark-as-extension"
+start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://www38.polyu.edu.hk/eStudent/"
+start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://learn.polyu.edu.hk/ultra/"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://calendar.google.com/calendar/u/0/r?pli=1"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://chromewebstore.google.com/detail/tab-limiter/pbpfchnddjilendkobiabenojlniemoh"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://github.com/login"
