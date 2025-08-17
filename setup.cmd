@@ -12,7 +12,8 @@ start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://github
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://www38.polyu.edu.hk/eStudent/"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://learn.polyu.edu.hk/ultra/"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://calendar.google.com/calendar/u/0/r?pli=1"
-start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://chromewebstore.google.com/detail/tab-limiter/pbpfchnddjilendkobiabenojlniemoh"
+@REM start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://chromewebstore.google.com/detail/tab-limiter/pbpfchnddjilendkobiabenojlniemoh"
+start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://chromewebstore.google.com/detail/tab-limit/djdcpjfmniidpdaalloiipgjphgikejl"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://github.com/login"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://www.google.com/search?q=waves+plugin+free&tbs=qdr:d"
 
@@ -123,4 +124,5 @@ cd /d %DOWNLOADS_DIR%
 start git-cmd.exe
 
 C:\Windows\System32\REG.EXE add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve && C:\Windows\System32\taskkill.exe /f /im explorer.exe && C:\Windows\explorer.exe
+
 
