@@ -6,6 +6,10 @@ set DOWNLOADS_DIR=%USERPROFILE%\Downloads
 set PATH=^
 %DOWNLOADS_DIR%\PortableGit\mingw64\bin;
 
+echo open Chrome first
+set /p GIT_TOKEN="Enter GitHub Token: "
+echo %GIT_TOKEN%
+
 @REM [openHacking/copy-csdn: 无需登录 一键复制csdn的代码](https://github.com/openHacking/copy-csdn)
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://github.com/openHacking/copy-csdn"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://github.com/dirkarnez/bookmark-as-extension"
@@ -17,8 +21,6 @@ start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://chrome
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://github.com/login"
 start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://www.google.com/search?q=waves+plugin+free&tbs=qdr:d"
 
-set /p GIT_TOKEN="Enter GitHub Token: "
-echo %GIT_TOKEN%
 
 @REM cd %~dp0..\Downloads\Software
 
@@ -122,6 +124,7 @@ cd cmake-as-scripting &&^
 
 cd /d %DOWNLOADS_DIR%
 start "" /b C:\Windows\System32\REG.EXE add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve && C:\Windows\System32\taskkill.exe /f /im explorer.exe && C:\Windows\explorer.exe
+
 
 
 
