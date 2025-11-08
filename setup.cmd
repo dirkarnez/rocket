@@ -77,7 +77,7 @@ del staticserver-v1.2.1.zip
 
 cd /d "%TEMP%" && ^
 %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/Kitware/CMake/releases/download/v3.29.3/cmake-3.29.3-windows-x86_64.zip\" -OutFile cmake-3.29.3-windows-x86_64.zip" &&^
-C:\PROGRA~1\7-Zip\7z.exe x cmake-3.29.3-windows-x86_64.zip -o%DOWNLOADS_DIR% &&^
+C:\PROGRA~1\7-Zip\7z.exe x cmake-3.29.3-windows-x86_64.zip -o%DOWNLOADS_DIR%\cmake-3.29.3-windows-x86_64 &&^
 del cmake-3.29.3-windows-x86_64.zip
 
 cd /d "%TEMP%" && ^
@@ -124,6 +124,7 @@ cd cmake-as-scripting &&^
 
 cd /d %DOWNLOADS_DIR%
 start "" /b C:\Windows\System32\REG.EXE add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve && C:\Windows\System32\taskkill.exe /f /im explorer.exe && C:\Windows\explorer.exe
+
 
 
 
