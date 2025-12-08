@@ -85,10 +85,10 @@ cd /d "%TEMP%" && ^
 C:\PROGRA~1\7-Zip\7z.exe x winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip -o%DOWNLOADS_DIR%\winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1 &&^
 del winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip
 
-@REM cd /d "%TEMP%" && ^
-@REM %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/dirkarnez/cpp-tools/raw/main/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z\" -OutFile x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z" &&^
-@REM C:\PROGRA~1\7-Zip\7z.exe x x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z -o"%USERPROFILE%\Downloads\x86_64-8.1.0-release-posix-seh-rt_v6-rev0" && ^
-@REM del x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z
+cd /d "%TEMP%" && ^
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/dirkarnez/cpp-tools/raw/main/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z\" -OutFile x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z" &&^
+C:\PROGRA~1\7-Zip\7z.exe x x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z -o"%USERPROFILE%\Downloads\x86_64-8.1.0-release-posix-seh-rt_v6-rev0" && ^
+del x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z
 
 @REM the file to read should not have BOM first
 @REM for /F "usebackq tokens=*" %%A in ("%~dp0..\github_token.txt") DO (
@@ -124,7 +124,6 @@ cd cmake-as-scripting &&^
 
 cd /d %DOWNLOADS_DIR%
 start "" /b C:\Windows\System32\REG.EXE add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve && C:\Windows\System32\taskkill.exe /f /im explorer.exe && C:\Windows\explorer.exe
-
 
 
 
