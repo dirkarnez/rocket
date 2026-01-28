@@ -5,45 +5,49 @@
 set DOWNLOADS_DIR=%USERPROFILE%\Downloads
 set PATH=^
 %DOWNLOADS_DIR%\PortableGit\mingw64\bin;
+C:\PROGRA~1\Google\Chrome\Application;^
+C:\PROGRA~2\Google\Chrome\Application;^
+C:\PROGRA~1\7-Zip;^
+C:\PROGRA~2\7-Zip;
 
 echo open Chrome first
 set /p GIT_TOKEN="Enter GitHub Token: "
 echo %GIT_TOKEN%
 
 @REM [openHacking/copy-csdn: 无需登录 一键复制csdn的代码](https://github.com/openHacking/copy-csdn)
-start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://github.com/openHacking/copy-csdn"
-start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://github.com/dirkarnez/bookmark-as-extension"
-start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://www38.polyu.edu.hk/eStudent/"
-start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://learn.polyu.edu.hk/ultra/"
-start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://calendar.google.com/calendar/u/0/r?pli=1"
-@REM start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://chromewebstore.google.com/detail/tab-limiter/pbpfchnddjilendkobiabenojlniemoh"
-start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://chromewebstore.google.com/detail/tab-limit/djdcpjfmniidpdaalloiipgjphgikejl"
-start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://github.com/login"
-start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "https://www.google.com/search?q=waves+plugin+free&tbs=qdr:d"
+start "" "chrome.exe" "https://github.com/openHacking/copy-csdn"
+start "" "chrome.exe" "https://github.com/dirkarnez/bookmark-as-extension"
+start "" "chrome.exe" "https://www38.polyu.edu.hk/eStudent/"
+start "" "chrome.exe" "https://learn.polyu.edu.hk/ultra/"
+start "" "chrome.exe" "https://calendar.google.com/calendar/u/0/r?pli=1"
+@REM start "" "chrome.exe" "https://chromewebstore.google.com/detail/tab-limiter/pbpfchnddjilendkobiabenojlniemoh"
+start "" "chrome.exe" "https://chromewebstore.google.com/detail/tab-limit/djdcpjfmniidpdaalloiipgjphgikejl"
+start "" "chrome.exe" "https://github.com/login"
+start "" "chrome.exe" "https://www.google.com/search?q=waves+plugin+free&tbs=qdr:d"
 
 
 @REM cd %~dp0..\Downloads\Software
 
 @REM echo Unzipping node...
-@REM "C:\Program Files\7-Zip\7z.exe" x node-v16.13.1-win-x64.zip -o%DOWNLOADS_DIR%
+@REM "7z.exe" x node-v16.13.1-win-x64.zip -o%DOWNLOADS_DIR%
 
 @REM echo Unzipping LLVM...
-@REM "C:\Program Files\7-Zip\7z.exe" x LLVM-13.0.0-win64.zip -o%DOWNLOADS_DIR%\LLVM-13.0.0-win64
+@REM "7z.exe" x LLVM-13.0.0-win64.zip -o%DOWNLOADS_DIR%\LLVM-13.0.0-win64
 
 @REM echo Unzipping arduino...
-@REM "C:\Program Files\7-Zip\7z.exe" x arduino-1.8.19-windows.zip -o%DOWNLOADS_DIR%
+@REM "7z.exe" x arduino-1.8.19-windows.zip -o%DOWNLOADS_DIR%
 
 @REM echo Unzipping avr-gcc...
-@REM "C:\Program Files\7-Zip\7z.exe" x avr-gcc-11.1.0-x64-windows.zip -o%DOWNLOADS_DIR%
+@REM "7z.exe" x avr-gcc-11.1.0-x64-windows.zip -o%DOWNLOADS_DIR%
 
 @REM echo Unzipping nasm...
-@REM "C:\Program Files\7-Zip\7z.exe" x nasm-2.15.05-win64.zip -o%DOWNLOADS_DIR%
+@REM "7z.exe" x nasm-2.15.05-win64.zip -o%DOWNLOADS_DIR%
 
 @REM echo Unzipping go...
-@REM "C:\Program Files\7-Zip\7z.exe" x go1.17.5.windows-amd64.zip -o%DOWNLOADS_DIR%
+@REM "7z.exe" x go1.17.5.windows-amd64.zip -o%DOWNLOADS_DIR%
 
 @REM echo Unzipping curl...
-@REM "C:\Program Files\7-Zip\7z.exe" x curl-7.82.0_4-win64-mingw.zip -o%DOWNLOADS_DIR%
+@REM "7z.exe" x curl-7.82.0_4-win64-mingw.zip -o%DOWNLOADS_DIR%
 
 @REM cd ..
 @REM copy Launchers\Code.cmd %DOWNLOADS_DIR%\VSCode-win32-x64-1.66.1
@@ -59,35 +63,35 @@ del PortableGit-2.42.0.2-64-bit.7z.exe
 
 @REM  cd /d "%TEMP%" && ^
 @REM  %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://curl.se/windows/dl-8.6.0_4/curl-8.6.0_4-win64-mingw.zip\"  -OutFile curl-8.6.0_4-win64-mingw.zip" &&^
-@REM  C:\PROGRA~1\7-Zip\7z.exe x curl-8.6.0_4-win64-mingw.zip -o%DOWNLOADS_DIR%\curl-8.6.0_4-win64-mingw &&^
+@REM  7z.exe x curl-8.6.0_4-win64-mingw.zip -o%DOWNLOADS_DIR%\curl-8.6.0_4-win64-mingw &&^
 @REM  del curl-8.6.0_4-win64-mingw.zip
 
 cd /d "%TEMP%" && ^
 %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/dirkarnez/serial-locate/releases/download/v1.0.0/serial-locate-v1.0.0.zip\" -OutFile serial-locate-v1.0.0.zip" &&^
-C:\PROGRA~1\7-Zip\7z.exe x serial-locate-v1.0.0.zip -o%DOWNLOADS_DIR% &&^
+7z.exe x serial-locate-v1.0.0.zip -o%DOWNLOADS_DIR% &&^
 del serial-locate-v1.0.0.zip
 
 cd /d "%TEMP%" && ^
 %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/dirkarnez/staticserver/releases/download/v1.2.1/staticserver-v1.2.1.zip\" -OutFile staticserver-v1.2.1.zip" &&^
-C:\PROGRA~1\7-Zip\7z.exe x staticserver-v1.2.1.zip -o%DOWNLOADS_DIR% &&^
+7z.exe x staticserver-v1.2.1.zip -o%DOWNLOADS_DIR% &&^
 del staticserver-v1.2.1.zip
 
 @REM curl.exe https://github.com/dirkarnez/git-commit-helper/releases/download/v0.0.4/git-commit-helper-v0.0.4.zip -L -O -J
-@REM "C:\Program Files\7-Zip\7z.exe" x git-commit-helper-v0.0.4.zip
+@REM "7z.exe" x git-commit-helper-v0.0.4.zip
 
 cd /d "%TEMP%" && ^
 %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/Kitware/CMake/releases/download/v3.29.3/cmake-3.29.3-windows-x86_64.zip\" -OutFile cmake-3.29.3-windows-x86_64.zip" &&^
-C:\PROGRA~1\7-Zip\7z.exe x cmake-3.29.3-windows-x86_64.zip -o%DOWNLOADS_DIR%\cmake-3.29.3-windows-x86_64 &&^
+7z.exe x cmake-3.29.3-windows-x86_64.zip -o%DOWNLOADS_DIR%\cmake-3.29.3-windows-x86_64 &&^
 del cmake-3.29.3-windows-x86_64.zip
 
 cd /d "%TEMP%" && ^
 %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/brechtsanders/winlibs_mingw/releases/download/11.2.0-12.0.1-9.0.0-r1/winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip\" -OutFile winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip" &&^
-C:\PROGRA~1\7-Zip\7z.exe x winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip -o%DOWNLOADS_DIR%\winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1 &&^
+7z.exe x winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip -o%DOWNLOADS_DIR%\winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1 &&^
 del winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip
 
 cd /d "%TEMP%" && ^
 %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/dirkarnez/cpp-tools/raw/main/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z\" -OutFile x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z" &&^
-C:\PROGRA~1\7-Zip\7z.exe x x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z -o"%USERPROFILE%\Downloads\x86_64-8.1.0-release-posix-seh-rt_v6-rev0" && ^
+7z.exe x x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z -o"%USERPROFILE%\Downloads\x86_64-8.1.0-release-posix-seh-rt_v6-rev0" && ^
 del x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z
 
 @REM the file to read should not have BOM first
