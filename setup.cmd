@@ -4,7 +4,7 @@
 
 set DOWNLOADS_DIR=%USERPROFILE%\Downloads
 set PATH=^
-%DOWNLOADS_DIR%\PortableGit\mingw64\bin;
+%DOWNLOADS_DIR%\PortableGit\mingw64\bin;^
 C:\PROGRA~1\Google\Chrome\Application;^
 C:\PROGRA~2\Google\Chrome\Application;^
 C:\PROGRA~1\7-Zip;^
@@ -128,6 +128,7 @@ cd cmake-as-scripting &&^
 
 cd /d %DOWNLOADS_DIR%
 start "" /b C:\Windows\System32\REG.EXE add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve && C:\Windows\System32\taskkill.exe /f /im explorer.exe && C:\Windows\explorer.exe
+
 
 
 
