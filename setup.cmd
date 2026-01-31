@@ -57,22 +57,22 @@ start "" "chrome.exe" "https://www.google.com/search?q=waves+plugin+free&tbs=qdr
 @REM  -O, --remote-name   Write output to a file named as the remote file
 
 cd /d "%TEMP%" && ^
-%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/git-for-windows/git/releases/download/v2.42.0.windows.2/PortableGit-2.42.0.2-64-bit.7z.exe\" -OutFile PortableGit-2.42.0.2-64-bit.7z.exe" &&^
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest \"https://github.com/git-for-windows/git/releases/download/v2.42.0.windows.2/PortableGit-2.42.0.2-64-bit.7z.exe\" -OutFile PortableGit-2.42.0.2-64-bit.7z.exe" &&^
 PortableGit-2.42.0.2-64-bit.7z.exe -o%DOWNLOADS_DIR%\PortableGit -y && ^
 del PortableGit-2.42.0.2-64-bit.7z.exe
 
 @REM  cd /d "%TEMP%" && ^
-@REM  %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://curl.se/windows/dl-8.6.0_4/curl-8.6.0_4-win64-mingw.zip\"  -OutFile curl-8.6.0_4-win64-mingw.zip" &&^
+@REM  %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest \"https://curl.se/windows/dl-8.6.0_4/curl-8.6.0_4-win64-mingw.zip\"  -OutFile curl-8.6.0_4-win64-mingw.zip" &&^
 @REM  7z.exe x curl-8.6.0_4-win64-mingw.zip -o%DOWNLOADS_DIR%\curl-8.6.0_4-win64-mingw &&^
 @REM  del curl-8.6.0_4-win64-mingw.zip
 
 cd /d "%TEMP%" && ^
-%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/dirkarnez/serial-locate/releases/download/v1.0.0/serial-locate-v1.0.0.zip\" -OutFile serial-locate-v1.0.0.zip" &&^
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest \"https://github.com/dirkarnez/serial-locate/releases/download/v1.0.0/serial-locate-v1.0.0.zip\" -OutFile serial-locate-v1.0.0.zip" &&^
 7z.exe x serial-locate-v1.0.0.zip -o%DOWNLOADS_DIR% &&^
 del serial-locate-v1.0.0.zip
 
 cd /d "%TEMP%" && ^
-%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/dirkarnez/staticserver/releases/download/v1.2.1/staticserver-v1.2.1.zip\" -OutFile staticserver-v1.2.1.zip" &&^
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest \"https://github.com/dirkarnez/staticserver/releases/download/v1.2.1/staticserver-v1.2.1.zip\" -OutFile staticserver-v1.2.1.zip" &&^
 7z.exe x staticserver-v1.2.1.zip -o%DOWNLOADS_DIR% &&^
 del staticserver-v1.2.1.zip
 
@@ -80,17 +80,17 @@ del staticserver-v1.2.1.zip
 @REM "7z.exe" x git-commit-helper-v0.0.4.zip
 
 cd /d "%TEMP%" && ^
-%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/Kitware/CMake/releases/download/v3.29.3/cmake-3.29.3-windows-x86_64.zip\" -OutFile cmake-3.29.3-windows-x86_64.zip" &&^
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest \"https://github.com/Kitware/CMake/releases/download/v3.29.3/cmake-3.29.3-windows-x86_64.zip\" -OutFile cmake-3.29.3-windows-x86_64.zip" &&^
 7z.exe x cmake-3.29.3-windows-x86_64.zip -o%DOWNLOADS_DIR%\cmake-3.29.3-windows-x86_64 &&^
 del cmake-3.29.3-windows-x86_64.zip
 
 cd /d "%TEMP%" && ^
-%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/brechtsanders/winlibs_mingw/releases/download/11.2.0-12.0.1-9.0.0-r1/winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip\" -OutFile winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip" &&^
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest \"https://github.com/brechtsanders/winlibs_mingw/releases/download/11.2.0-12.0.1-9.0.0-r1/winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip\" -OutFile winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip" &&^
 7z.exe x winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip -o%DOWNLOADS_DIR%\winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1 &&^
 del winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r1.zip
 
 cd /d "%TEMP%" && ^
-%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "Invoke-WebRequest \"https://github.com/dirkarnez/cpp-tools/raw/main/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z\" -OutFile x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z" &&^
+%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest \"https://github.com/dirkarnez/cpp-tools/raw/main/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z\" -OutFile x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z" &&^
 7z.exe x x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z -o"%USERPROFILE%\Downloads\x86_64-8.1.0-release-posix-seh-rt_v6-rev0" && ^
 del x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z
 
@@ -128,6 +128,7 @@ cd cmake-as-scripting &&^
 
 cd /d %DOWNLOADS_DIR%
 start "" /b C:\Windows\System32\REG.EXE add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve && C:\Windows\System32\taskkill.exe /f /im explorer.exe && C:\Windows\explorer.exe
+
 
 
 
