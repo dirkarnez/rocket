@@ -130,11 +130,3 @@ cd /d %DOWNLOADS_DIR%
 C:\Windows\System32\Reg.exe add "HKCU\Software\Microsoft\Clipboard" /v "EnableClipboardHistory" /t REG_DWORD /d "1" /f
 C:\Windows\System32\Reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
 C:\Windows\System32\taskkill.exe /f /im explorer.exe && C:\Windows\explorer.exe
-
-
-
-
-
-
-
-
