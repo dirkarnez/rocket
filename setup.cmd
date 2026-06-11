@@ -10,7 +10,8 @@ C:\PROGRA~2\Google\Chrome\Application;^
 C:\PROGRA~1\7-Zip;^
 C:\PROGRA~2\7-Zip;
 
-echo open Chrome first
+echo open Chrome first && pause
+
 set /p GIT_TOKEN="Enter GitHub Token: "
 echo %GIT_TOKEN%
 
